@@ -1,0 +1,24 @@
+services:
+  debian-stretch:
+    image: percywhite/kaigara:0.0.5-stretch
+    build:
+      context: ./debian/stretch/
+      dockerfile: Dockerfile
+
+  debian-bullseye:
+    image: percywhite/kaigara:0.0.5-bullseye
+    build:
+      context: ./debian/bullseye/
+      dockerfile: Dockerfile
+
+  alpine-3.7:
+    image: percywhite/kaigara:0.0.5-alpine3.7
+    build:
+      context: ./alpine/3.7/
+      dockerfile: Dockerfile
+
+  alpine-3.14:
+    image: percywhite/kaigara:0.0.5-alpine3.14
+    build:
+      context: ./alpine/3.14/
+      dockerfile: Dockerfile
