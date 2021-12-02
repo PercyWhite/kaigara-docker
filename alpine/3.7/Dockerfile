@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.7 as kaigara-build
 
 ARG TARGETARCH
 
@@ -10,4 +10,6 @@ ENV GOPATH="/usr/local/go"
 
 RUN go install github.com/rubykube/kaigara@v0.0.5
 
-RUN cp ${GOPATH}/bin/kaigara /usr/local/bin/kaigara
+FROM alpine:3.7
+
+COPY --from=kaigara-build /usr/local/go/bin/kaigara /usr/local/bin/kaigara

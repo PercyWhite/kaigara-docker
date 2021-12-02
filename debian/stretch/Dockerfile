@@ -1,5 +1,7 @@
-FROM golang:stretch
+FROM golang:stretch as kaigara-build
 
 RUN go install github.com/rubykube/kaigara@v0.0.5
 
-RUN cp /go/bin/kaigara /usr/local/bin/kaigara
+FROM debian:stretch-slim
+
+COPY --from=kaigara-build /go/bin/kaigara /usr/local/bin/kaigara

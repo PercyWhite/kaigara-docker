@@ -1,5 +1,7 @@
-FROM golang:buster
+FROM golang:buster as kaigara-build
 
 RUN go install github.com/rubykube/kaigara@v0.0.5
 
-RUN cp /go/bin/kaigara /usr/local/bin/kaigara
+FROM debian:buster-slim
+
+COPY --from=kaigara-build /go/bin/kaigara /usr/local/bin/kaigara
