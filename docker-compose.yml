@@ -28,3 +28,9 @@ services:
     build:
       context: ./alpine/3.14/
       dockerfile: Dockerfile
+
+  ubuntu-focal:
+    image: percywhite/kaigara:0.0.5-focal
+    build:
+      context: ./ubuntu/focal/
+      dockerfile: Dockerfile
