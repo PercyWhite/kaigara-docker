@@ -11,6 +11,12 @@ services:
       context: ./debian/bullseye/
       dockerfile: Dockerfile
 
+  debian-buster:
+    image: percywhite/kaigara:0.0.5-buster
+    build:
+      context: ./debian/buster/
+      dockerfile: Dockerfile
+
   alpine-3.7:
     image: percywhite/kaigara:0.0.5-alpine3.7
     build:
