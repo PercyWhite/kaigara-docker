@@ -1,4 +1,10 @@
 services:
+  debian-wheezy:
+    image: percywhite/kaigara:0.0.5-wheezy
+    build:
+      context: ./debian/wheezy/
+      dockerfile: Dockerfile
+
   debian-stretch:
     image: percywhite/kaigara:0.0.5-stretch
     build:
