@@ -1,4 +1,10 @@
 services:
+  debian-jessie:
+    image: percywhite/kaigara:0.0.5-jessie
+    build:
+      context: ./debian/jessie/
+      dockerfile: Dockerfile
+
   debian-wheezy:
     image: percywhite/kaigara:0.0.5-wheezy
     build:
