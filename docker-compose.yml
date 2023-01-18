@@ -41,6 +41,24 @@ services:
       context: ./alpine/3.14/
       dockerfile: Dockerfile
 
+  alpine-3.15:
+    image: percywhite/kaigara:0.0.5-alpine3.15
+    build:
+      context: ./alpine/3.15/
+      dockerfile: Dockerfile
+
+  alpine-3.16:
+    image: percywhite/kaigara:0.0.5-alpine3.16
+    build:
+      context: ./alpine/3.16/
+      dockerfile: Dockerfile
+
+  alpine-3.17:
+    image: percywhite/kaigara:0.0.5-alpine3.17
+    build:
+      context: ./alpine/3.17/
+      dockerfile: Dockerfile
+
   ubuntu-focal:
     image: percywhite/kaigara:0.0.5-focal
     build:
